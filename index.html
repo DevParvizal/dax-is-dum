@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attractive Click Me Button</title>
+    <title>Dax is Dum</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -65,12 +65,17 @@
 </head>
 <body>
     <div class="container">
-        <button class="cta-button" onclick="redirectToURL()">Click Me</button>
+        <button class="cta-button" onclick="handleButtonClick(this)">Click Me</button>
     </div>
 
     <script>
-        function redirectToURL() {
-            window.location.href = 'https://comm-presentation-abhinavs-projects-2ed019bf.vercel.app/';
+        function handleButtonClick(button) {
+            button.innerText = 'U are dum btw';
+            button.disabled = true; // Disable the button to prevent multiple clicks
+
+            setTimeout(function() {
+                window.location.href = 'https://comm-presentation-abhinavs-projects-2ed019bf.vercel.app/';
+            }, 10000); // 10000 milliseconds = 10 seconds
         }
     </script>
 </body>
